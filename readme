@@ -1,1 +1,7 @@
-#thriveconnect
+# thriveconnect
+
+## Structure
+- public/index.html: static prototype page
+- data/questions.json: intake questions (edit as needed)
+- data/therapists.json: therapist catalog (edit as needed)
+- src/: future app code

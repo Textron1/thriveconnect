@@ -1,0 +1,60 @@
+[
+  {
+    "id": "t1",
+    "name": "Colter",
+    "credentials": "LMFT",
+    "specialties": ["Anxiety", "Relationships", "Life Transitions"],
+    "modalities": ["CBT", "Mindfulness"],
+    "gender": "male",
+    "services": [
+      "services_individual_adult",
+      "services_couples",
+      "services_group"
+    ],
+    "focuses": ["anxiety_depression", "relationships_individual", "grief"],
+    "locations": ["phoenix"],
+    "virtual": true,
+    "inPerson": true,
+    "virtualOnly": false,
+    "insurances": ["BCBS", "Aetna", "United"],
+    "outOfNetwork": true,
+    "isIntern": false,
+    "photoUrl": "assets/colter.png"
+  },
+  {
+    "id": "t2",
+    "name": "Riley Chen",
+    "credentials": "LCSW",
+    "specialties": ["Trauma", "OCD", "Substance Use"],
+    "modalities": ["ACT", "Somatic"],
+    "gender": "female",
+    "services": ["services_iop", "services_individual_adult"],
+    "focuses": ["trauma", "ocd", "substance_use"],
+    "locations": ["glendale"],
+    "virtual": false,
+    "inPerson": true,
+    "virtualOnly": false,
+    "insurances": ["Cigna", "Aetna"],
+    "outOfNetwork": false,
+    "isIntern": false,
+    "photoUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "t3",
+    "name": "Jamie Rivera",
+    "credentials": "Intern",
+    "specialties": ["Child/Adolescent", "Anxiety", "Family Support"],
+    "modalities": ["Play Therapy", "CBT"],
+    "gender": "female",
+    "services": ["services_individual_child"],
+    "focuses": ["child_support", "anxiety_depression"],
+    "locations": [],
+    "virtual": true,
+    "inPerson": false,
+    "virtualOnly": true,
+    "insurances": ["BCBS"],
+    "outOfNetwork": true,
+    "isIntern": true,
+    "photoUrl": "https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=600&q=80"
+  }
+]

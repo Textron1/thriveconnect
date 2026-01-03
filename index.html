@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ThriveConnect | Match Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Grotesk:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0f1b2b;
+        --paper: #f6efe7;
+        --accent: #e46a2c;
+        --accent-2: #2e6f6f;
+        --wash: #fde9d3;
+        --stroke: rgba(15, 27, 43, 0.15);
+        --shadow: 0 18px 40px rgba(15, 27, 43, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 12% 10%, #fcd0b6 0 18%, transparent 18%),
+          radial-gradient(circle at 90% 20%, #c7e5dd 0 16%, transparent 16%),
+          radial-gradient(circle at 70% 85%, #f5b493 0 20%, transparent 20%),
+          linear-gradient(120deg, var(--paper), #f8f2ea);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 20px;
+      }
+
+      .shell {
+        width: min(960px, 100%);
+        display: grid;
+        gap: 24px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 24px;
+      }
+
+      .brand {
+        display: grid;
+        gap: 8px;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-family: "Fraunces", "Times New Roman", serif;
+        font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+        letter-spacing: -0.5px;
+      }
+
+      .brand p {
+        margin: 0;
+        max-width: 480px;
+        font-size: 1.02rem;
+        color: rgba(15, 27, 43, 0.75);
+      }
+
+      .progress {
+        background: rgba(15, 27, 43, 0.08);
+        border-radius: 999px;
+        height: 10px;
+        width: min(260px, 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .progress::after {
+        content: "";
+        position: absolute;
+        inset: 0 55% 0 0;
+        background: linear-gradient(90deg, var(--accent), #f7a53d);
+        border-radius: inherit;
+        animation: slide 2.4s ease-in-out infinite;
+      }
+
+      @keyframes slide {
+        0% {
+          inset: 0 70% 0 0;
+        }
+        50% {
+          inset: 0 35% 0 0;
+        }
+        100% {
+          inset: 0 70% 0 0;
+        }
+      }
+
+      .card {
+        background: white;
+        border: 1px solid var(--stroke);
+        border-radius: 28px;
+        padding: clamp(24px, 4vw, 36px);
+        box-shadow: var(--shadow);
+        display: grid;
+        gap: 24px;
+        animation: lift 0.8s ease both;
+      }
+
+      @keyframes lift {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .question {
+        display: grid;
+        gap: 16px;
+      }
+
+      .question h2 {
+        margin: 0;
+        font-size: clamp(1.4rem, 2vw, 1.9rem);
+      }
+
+      .question p {
+        margin: 0;
+        color: rgba(15, 27, 43, 0.7);
+      }
+
+      .options {
+        display: grid;
+        gap: 12px;
+      }
+
+      .option {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+        border-radius: 18px;
+        border: 1px solid var(--stroke);
+        background: var(--paper);
+        cursor: pointer;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+        animation: fade-in 0.8s ease both;
+      }
+
+      .option:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+
+      .option:nth-child(2) {
+        animation-delay: 0.18s;
+      }
+
+      .option:nth-child(3) {
+        animation-delay: 0.26s;
+      }
+
+      .option:hover {
+        transform: translateY(-2px);
+        border-color: rgba(15, 27, 43, 0.35);
+      }
+
+      .option input {
+        width: 18px;
+        height: 18px;
+        accent-color: var(--accent);
+      }
+
+      .option span {
+        font-weight: 600;
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .tag {
+        font-size: 0.95rem;
+        color: rgba(15, 27, 43, 0.65);
+        background: var(--wash);
+        border-radius: 999px;
+        padding: 6px 12px;
+      }
+
+      button {
+        border: none;
+        border-radius: 999px;
+        padding: 12px 22px;
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: inherit;
+        background: linear-gradient(135deg, var(--accent), #f7a53d);
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 8px 18px rgba(228, 106, 44, 0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 22px rgba(228, 106, 44, 0.3);
+      }
+
+      .sidebar {
+        display: grid;
+        gap: 16px;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px dashed rgba(15, 27, 43, 0.2);
+        border-radius: 22px;
+        padding: 18px;
+      }
+
+      .sidebar h3 {
+        margin: 0;
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .sidebar ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .sidebar li {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.96rem;
+        color: rgba(15, 27, 43, 0.75);
+      }
+
+      @media (min-width: 860px) {
+        .grid {
+          display: grid;
+          grid-template-columns: 1.6fr 0.9fr;
+          gap: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <div class="brand">
+          <h1>ThriveConnect</h1>
+          <p>
+            A calm, guided intake that turns real answers into therapist matches.
+            Today is just a placeholder preview.
+          </p>
+        </div>
+        <div class="progress" aria-label="Progress preview"></div>
+      </header>
+
+      <section class="grid">
+        <form class="card" aria-label="Sample intake question">
+          <div class="question">
+            <h2>Question A</h2>
+            <p>Pick one option that best fits how you are feeling today.</p>
+          </div>
+
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="question-a" checked />
+              <span>Option A</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="question-a" />
+              <span>Option B</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="question-a" />
+              <span>Option C</span>
+            </label>
+          </div>
+
+          <div class="actions">
+            <span class="tag">Preview: 1 of 12</span>
+            <button type="button">Next Question</button>
+          </div>
+        </form>
+
+        <aside class="sidebar">
+          <h3>What Happens Next</h3>
+          <ul>
+            <li><span>Answer review</span><strong>AI analysis</strong></li>
+            <li><span>Therapist list</span><strong>Curated</strong></li>
+            <li><span>Best-fit match</span><strong>Presented</strong></li>
+            <li><span>Intro message</span><strong>Sent</strong></li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

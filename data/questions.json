@@ -1,0 +1,129 @@
+[
+  {
+    "id": "services",
+    "label": "Question 1",
+    "prompt": "What type of services are you interested in? (Select up to 3)",
+    "type": "multi",
+    "maxSelections": 3,
+    "options": [
+      { "id": "services_iop", "label": "Intensive Outpatient Program (IOP)" },
+      { "id": "services_individual_adult", "label": "Individual therapy (adult)" },
+      { "id": "services_individual_child", "label": "Individual therapy (child/adolescent)" },
+      { "id": "services_couples", "label": "Couples therapy" },
+      { "id": "services_ketamine", "label": "Ketamine-Assisted Psychotherapy" },
+      { "id": "services_group", "label": "Group therapy" }
+    ]
+  },
+  {
+    "id": "primary_focus",
+    "label": "Question 2",
+    "prompt": "What’s the main thing you want help with right now? (Select 1)",
+    "type": "single",
+    "options": [
+      { "id": "primary_anxiety_depression", "label": "Anxiety/Depression" },
+      { "id": "primary_ocd", "label": "OCD" },
+      { "id": "primary_trauma", "label": "Trauma" },
+      { "id": "primary_relationships_individual", "label": "Relationship help (individual)" },
+      { "id": "primary_relationships_couples", "label": "Relationship help (couples)" },
+      { "id": "primary_spiritual_trauma", "label": "Spiritual trauma" },
+      { "id": "primary_child_support", "label": "Child/adolescent support" },
+      { "id": "primary_substance_use", "label": "Substance use" },
+      { "id": "primary_eating_disorder", "label": "Eating disorder" },
+      { "id": "primary_personality_disorder", "label": "Personality disorder" },
+      { "id": "primary_grief", "label": "Grief" },
+      { "id": "primary_personal_growth", "label": "Not sure / personal growth" }
+    ]
+  },
+  {
+    "id": "secondary_focus",
+    "label": "Question 3",
+    "prompt": "Anything else you’d like to work on? (Select all that apply)",
+    "type": "multi",
+    "options": [
+      { "id": "secondary_anxiety_depression", "label": "Anxiety/Depression" },
+      { "id": "secondary_ocd", "label": "OCD" },
+      { "id": "secondary_trauma", "label": "Trauma" },
+      { "id": "secondary_relationships_individual", "label": "Relationship help (individual)" },
+      { "id": "secondary_relationships_couples", "label": "Relationship help (couples)" },
+      { "id": "secondary_spiritual_trauma", "label": "Spiritual trauma" },
+      { "id": "secondary_child_support", "label": "Child/adolescent support" },
+      { "id": "secondary_substance_use", "label": "Substance use" },
+      { "id": "secondary_eating_disorder", "label": "Eating disorder" },
+      { "id": "secondary_personality_disorder", "label": "Personality disorder" },
+      { "id": "secondary_grief", "label": "Grief" },
+      { "id": "secondary_personal_growth", "label": "Not sure / personal growth" }
+    ]
+  },
+  {
+    "id": "therapist_gender",
+    "label": "Question 4",
+    "prompt": "Do you have a therapist gender preference?",
+    "type": "single",
+    "options": [
+      { "id": "gender_female_only", "label": "Female only" },
+      { "id": "gender_prefer_female", "label": "Prefer female" },
+      { "id": "gender_no_preference", "label": "No preference" },
+      { "id": "gender_prefer_male", "label": "Prefer male" },
+      { "id": "gender_male_only", "label": "Male only" }
+    ]
+  },
+  {
+    "id": "location_preference",
+    "label": "Question 5",
+    "prompt": "What location works best for you?",
+    "type": "single",
+    "options": [
+      { "id": "location_phoenix_only", "label": "Phoenix only (Tatum & Shea)" },
+      { "id": "location_prefer_phoenix", "label": "Prefer Phoenix" },
+      { "id": "location_either", "label": "Either location" },
+      { "id": "location_prefer_glendale", "label": "Prefer Glendale" },
+      { "id": "location_glendale_only", "label": "Glendale only (75th Ave & Bell)" },
+      { "id": "location_virtual_only", "label": "Virtual only" }
+    ]
+  },
+  {
+    "id": "virtual_only_ok",
+    "label": "Question 6",
+    "prompt": "If your best match is virtual-only, would you be open to that?",
+    "type": "single",
+    "options": [
+      { "id": "virtual_yes_only", "label": "Yes — virtual only" },
+      { "id": "virtual_yes_either", "label": "Yes — either in-person or virtual" },
+      { "id": "virtual_no_in_person", "label": "No — in-person only" }
+    ]
+  },
+  {
+    "id": "insurance",
+    "label": "Question 7",
+    "prompt": "What insurance do you have?",
+    "type": "single",
+    "options": [
+      { "id": "insurance_bcbs", "label": "BCBS" },
+      { "id": "insurance_aetna", "label": "Aetna" },
+      { "id": "insurance_united", "label": "United" },
+      { "id": "insurance_cigna", "label": "Cigna" },
+      { "id": "insurance_medicare", "label": "Medicare/Medicaid" },
+      { "id": "insurance_other", "label": "Other / Not sure" }
+    ]
+  },
+  {
+    "id": "out_of_network",
+    "label": "Question 8",
+    "prompt": "If your best match is out-of-network (doesn’t take your insurance), would you still like to be considered?",
+    "type": "single",
+    "options": [
+      { "id": "out_of_network_yes", "label": "Yes" },
+      { "id": "out_of_network_no", "label": "No" }
+    ]
+  },
+  {
+    "id": "intern_clinician",
+    "label": "Question 9",
+    "prompt": "If cost is a concern, would you be open to seeing an intern clinician?",
+    "type": "single",
+    "options": [
+      { "id": "intern_yes", "label": "Yes" },
+      { "id": "intern_no", "label": "No" }
+    ]
+  }
+]
